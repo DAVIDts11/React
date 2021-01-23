@@ -18,7 +18,6 @@ class TranspList extends Component {
             name={item.name} city={item.city} onChange={this.props.onChange} onDelete={this.props.onDelete} />);
     }
    render(){
-        {/* onChange={props.update} onDelete={props.delete} */ }
         return (
             <div className="ideas_list">
                 {this.props.transportations.map(this.eachTransp)}

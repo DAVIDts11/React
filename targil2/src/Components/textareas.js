@@ -1,20 +1,10 @@
 import React, { Component } from 'react';
-
+import Button from '@material-ui/core/Button';
 
 
 class TekstArias extends Component {
     constructor(props) {
         super(props);
-        // this.state = {
-        //     saveMode: true
-        // };
-        // if (this.props.mode == "saveMode"){
-        //     this.setState({ saveMode:true});
-        // }
-
-        // else  {
-        //     this.setState({ saveMode:false});
-        // }
 
         let newDate = "";
         let newName = "";
@@ -28,8 +18,8 @@ class TekstArias extends Component {
 
 
     edit(e) {
-        e.preventDefault();
-        this.props.onEdit(this.props.curr.id,this.newDate.value,this.newName.value,this.newCity.value)
+        // e.preventDefault();
+        this.props.onEdit(this.props.curr.id, this.newDate.value, this.newName.value, this.newCity.value)
     }
 
 
@@ -41,32 +31,35 @@ class TekstArias extends Component {
 
     renderSave() {
         return (
-            <div>
+            <div className="textarias">
                 <form>
-                    <textarea ref={input => (this.newDate = input)} />
-                    <textarea ref={input => (this.newName = input)} />
-                    <textarea ref={input => (this.newCity = input)} />
-                    <button onClick={this.save}>Save</button>
+                    <textarea defaultValue="" ref={input => (this.newDate = input)} /> <br />
+                    <textarea defaultValue="" ref={input => (this.newName = input)} /><br />
+                    <textarea defaultValue="" ref={input => (this.newCity = input)} /><br />
+                      <div className="centr" > 
+                    <Button   variant="contained"  onClick={this.save} color="secondary">
+                        Save
+                        </Button>
+                       </div>
                 </form>
-                {this.props.mode}
             </div>
         );
     }
 
 
     renderEdit() {
-        console.log("kjhljkh");
-        console.log(this.props.curr);
 
-        return (<div>
-            <form>
-                <textarea placeholder ={this.props.curr} ref={input => (this.newDate = input)} />
-                <textarea  placeholder ={this.props.curr.name} ref={input => (this.newName = input)} />
-                <textarea placeholder ={this.props.curr.city} ref={input => (this.newCity = input)} />
-                <button onClick={this.edit}>Edit</button>
-            </form>
-            {this.props.mode}
-        </div>
+        return (
+            <div className="textarias">
+                <form >
+                    <textarea defaultValue={this.props.curr.date} ref={input => (this.newDate = input)} /><br />
+                    <textarea defaultValue={this.props.curr.name} ref={input => (this.newName = input)} /><br />
+                    <textarea defaultValue={this.props.curr.city} ref={input => (this.newCity = input)} /><br />
+                    <Button variant="contained"  onClick={this.edit} color="secondary">
+                        Edit
+                        </Button>
+                </form>
+            </div>
         );
     }
 

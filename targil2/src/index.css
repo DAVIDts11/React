@@ -14,15 +14,32 @@ code {
 
 
 .main_section{
-  height: 700px;
-  width: 80%;
-  background-image: url("./Pictures/a659a126-1bab-4019-97e0-4456046f62d5.png");
+  float: right;
+  position: relative;
+  height: 375px;
+  width: 771px;
+  background-image: url("./Pictures/back-smalk.png");
 }
 
 
 
 .ideas_list{
+  position: absolute;
+  top: 30px;
+  left: 55px;
   background-color: aliceblue;
-  width: 550px;
-  height: 150px;
+  width: 400px;
+  height: 300px;
+}
+
+.textarias{
+  position: absolute;
+  top:30px;
+  right: 55px;
+}
+
+
+.centr{
+  margin: 0 auto;
+  padding-left: 60px;
 }
