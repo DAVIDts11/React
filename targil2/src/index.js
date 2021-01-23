@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MainSection from './Components/main_section'
+import Truck from './Components/truck'
 import './index.css';
 
 import reportWebVitals from './reportWebVitals';
@@ -8,9 +9,11 @@ import reportWebVitals from './reportWebVitals';
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.StrictMode >
+    <div className="body">   
     <MainSection />
-    
+     <Truck />
+     </div>
   </React.StrictMode>,
   document.getElementById('root')
 );

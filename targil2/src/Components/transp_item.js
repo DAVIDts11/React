@@ -27,15 +27,21 @@ class TtranspItem extends Component {
 
     render() {
         return (
-            <div className="transp_item">
-                {this.props.id} {this.props.date} {this.props.name} {this.props.city}
-                <Fab color="primary" onClick={this.delete} color="secondary" aria-label="delete" size="small">
-                    <DeleteIcon />
-                </Fab>
-                <Fab color="primary" onClick={this.setEdit} color="secondary" aria-label="edit" size="small">
-                    <EditIcon />
-                </Fab>
+            <div className="transpItem">
+               
+                {this.props.id} &emsp; {this.props.date} &emsp; {this.props.name} &emsp; {this.props.city}
+              
 
+                <div className="icon">
+                    <Fab color="primary" onClick={this.delete} color="secondary" aria-label="delete" size="small">
+                        <DeleteIcon />
+                    </Fab>
+                </div>
+                <div className="icon">
+                    <Fab color="primary" onClick={this.setEdit} color="secondary" aria-label="edit" size="small">
+                        <EditIcon />
+                    </Fab>
+                </div>
             </div>
         );
     }

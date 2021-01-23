@@ -36,11 +36,11 @@ class TekstArias extends Component {
                     <textarea defaultValue="" ref={input => (this.newDate = input)} /> <br />
                     <textarea defaultValue="" ref={input => (this.newName = input)} /><br />
                     <textarea defaultValue="" ref={input => (this.newCity = input)} /><br />
-                      <div className="centr" > 
-                    <Button   variant="contained"  onClick={this.save} color="secondary">
-                        Save
+                    <div className="centr" >
+                        <Button variant="contained" onClick={this.save} color="secondary">
+                            Save
                         </Button>
-                       </div>
+                    </div>
                 </form>
             </div>
         );
@@ -55,9 +55,11 @@ class TekstArias extends Component {
                     <textarea defaultValue={this.props.curr.date} ref={input => (this.newDate = input)} /><br />
                     <textarea defaultValue={this.props.curr.name} ref={input => (this.newName = input)} /><br />
                     <textarea defaultValue={this.props.curr.city} ref={input => (this.newCity = input)} /><br />
-                    <Button variant="contained"  onClick={this.edit} color="secondary">
-                        Edit
+                    <div className="centr" >
+                        <Button variant="contained" onClick={this.edit} color="secondary">
+                            Edit
                         </Button>
+                    </div>
                 </form>
             </div>
         );
